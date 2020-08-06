@@ -32,7 +32,7 @@ namespace OofHarvester
                         if (!line.Equals(Program.EOMString))
                         {
                             sb.Append(line);
-                            if (line.Contains("[CodeFlow]"))
+                            if (line.Contains("[CodeFlow") || line.Contains("[ CodeFlow"))
                                 codeFlow = true;
                         }
                         else
@@ -49,6 +49,7 @@ namespace OofHarvester
                                 dupCount++;
                             }
                             sb.Clear();
+                            codeFlow = false;
                         }
                     }
                     Console.WriteLine($" Done. Added {count-dupCount} messages out of {count} processed...");

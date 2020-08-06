@@ -184,7 +184,7 @@ namespace OofHarvester
                             autogen = true;
                         if (response && autogen)
                         {
-                            if (message.Body.Content.Contains("[CodeFlow]"))
+                            if (message.Body.Content.Contains("[CodeFlow") || message.Body.Content.Contains("[ CodeFlow"))
                                 break;
 
                             Console.WriteLine($"Found OOF message: '{message.BodyPreview}'");

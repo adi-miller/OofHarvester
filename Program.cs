@@ -11,6 +11,7 @@ namespace OofHarvester
         //       - Only enumerates folders - doesn't process messages
         // v0.10 - Back to process messages as well.
         // v0.11 - Refactor to a class, added support for Collect()
+        //       - Ignore more types of CodeFlow emails
         ///
         public static string Ver = "v0.11";
         public static string EOMString = "--- End of Message ---";
